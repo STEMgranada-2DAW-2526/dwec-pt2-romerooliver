@@ -1,4 +1,5 @@
-import { useReducer, useContext, useState } from 'react'
+import React, { createContext, use, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { GameContext } from './GameContext';
 import './App.css'
 

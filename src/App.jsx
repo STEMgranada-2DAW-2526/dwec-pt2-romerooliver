@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import React, { createContext, use, useEffect, useState } from 'react';
 import { GameProvider } from './GameContext'
+import { useContext } from 'react';
 import Game from './Game'
 import './App.css'
 

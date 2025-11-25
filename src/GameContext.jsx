@@ -1,9 +1,10 @@
 import { useContext } from 'react';
 import React, { createContext, use, useEffect, useState } from 'react';
 
+
 export const GameContext = createContext();
 
-export function GameProvider(children) {
+export function GameProvider({ children }) {
 
     const INITIAL_STATE = {
         damageDealt: 0,
@@ -14,7 +15,7 @@ export function GameProvider(children) {
         upgrades: [],
     }
 
-    const [state, setState] = useState([INITIAL_STATE]);
+    const [state, setState] = useState(INITIAL_STATE);
 
     function changeState(action) {
 
@@ -22,15 +23,22 @@ export function GameProvider(children) {
 
         if (action == 'CLICK_SHOOT') {
             newState = { ...state, damageDealt: state.damageDealt + 1 }
-            console.log(state)
+        }else if (action == 'AUTO_SHOOT') {
+            newState = { ...state, autoShotsPerShot: state.autoShotsPerShot + 1 }
+        }else if (action == 'BUY_MULTIPLIER') {
+            newState = { ...state, damageDealt: state.damageDealt + 1 }
+        }else if (action == 'BUY_DAMANGE_UPGRADE') {
+            newState = { ...state, damageDealt: state.damageDealt + 1 }
+        }else if (action == 'NEXT_WAVE') {
+            newState = { ...state, damageDealt: 0 }
         }
 
         setState(newState)
     }
 
     return (
-        <RuletaContext.Provider value={{ state, changeState }}>
+        <GameContext.Provider value={{ state, changeState }}>
             {children}
-        </RuletaContext.Provider>
+        </GameContext.Provider>
     );
 }
