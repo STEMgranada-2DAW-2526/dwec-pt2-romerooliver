@@ -1,6 +1,9 @@
 import { useContext } from 'react';
+import React, { createContext, use, useEffect, useState } from 'react';
 
-export default function GameProvider(children) {
+export const GameContext = createContext();
+
+export function GameProvider(children) {
 
     const INITIAL_STATE = {
         damageDealt: 0,
