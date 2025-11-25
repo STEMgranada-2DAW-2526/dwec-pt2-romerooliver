@@ -3,9 +3,9 @@ import { useContext } from 'react';
 export default function GameProvider() {
     function gameReducer(state, action) {
 
-        let outputState = state;
+        let estadistcasCañon = state;
         { }
 
-        return outputState;
+        return estadistcasCañon;
     }
 }
