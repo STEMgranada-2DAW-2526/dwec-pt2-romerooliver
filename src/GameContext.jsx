@@ -14,7 +14,7 @@ export function GameProvider(children) {
         upgrades: [],
     }
 
-    const [state, setState] = useState(INITIAL_STATE);
+    const [state, setState] = useState([INITIAL_STATE]);
 
     function changeState(action) {
 
