@@ -13,7 +13,7 @@ export default function GameProvider(children) {
 
     const [state, setState] = useState(INITIAL_STATE);
 
-    function changeState(accion) {
+    function changeState(action) {
 
         let newState;
 

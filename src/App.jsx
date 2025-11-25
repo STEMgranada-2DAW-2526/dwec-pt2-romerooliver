@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import GameProvider from './GameProvider'
+import { GameProvider } from './GameProvider'
 import Game from './Game'
 import './App.css'
 
