@@ -1,12 +1,16 @@
 import { useState } from 'react'
-import { GameContext } from './GameContext';
+import { GameProvider } from './GameProvider';
 import './App.css'
 
-const INITIAL_STATE = {
-  damageDealt: 0,
-  waveGoal:100,
-  caramels:20,
-  damagePerShot:1,
-  autoShotsPerShot:1,
-  upgrades:[],
+
+export default function Tablero() {
+
+    const {  } = useContext(GameProvider);
+
+
+    return (
+        <div >
+            <button onClick={() => dispatch({ type: 'CLICK_SHOOT' })}>DISPARAR</button>
+        </div>
+    )
 }
