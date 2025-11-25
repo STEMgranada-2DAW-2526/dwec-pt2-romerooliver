@@ -1,0 +1,18 @@
+import React, { createContext, use, useEffect, useState } from 'react';
+import { useContext } from 'react';
+import { GameContext } from './GameContext';
+import './App.css'
+
+
+
+export default function Game() {
+;
+    const { state, changeState } = useContext(GameContext);
+
+
+    return (
+        <div >
+            <button onClick={() => changeState("CLICK_SHOOT")}>DISPARAR</button>
+        </div>
+    )
+}
