@@ -1,23 +1,17 @@
 import { useState } from 'react'
 import GameProvider from './GameProvider'
+import Game from './Game'
 import './App.css'
 
-const INITIAL_STATE = {
-  damageDealt: 0,
-  waveGoal:100,
-  caramels:20,
-  damagePerShot:1,
-  autoShotsPerShot:1,
-  upgrades:[],
-}
 
-function Game() {
+
+function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
     <GameProvider>
-      <Game/>
+      <Game />
     </GameProvider>
     </>
   )
